@@ -12,18 +12,29 @@
         </ion-toolbar>
       </ion-header>
     
-      <ExploreContainer name="Tab 1 page" />
+			<ion-list>
+				<ion-item>
+					<ion-label position="stacked">Test</ion-label>
+
+					<ion-input v-model="test"></ion-input>
+				</ion-item>
+			</ion-list>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import { defineComponent, ref } from 'vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonInput } from '@ionic/vue';
 
 export default  defineComponent({
   name: 'Tab1Page',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonList, IonItem, IonLabel, IonInput },
+  setup: function() {
+    const test = ref('Test input default value');
+    return {
+      test,
+    };
+  }
 });
 </script>

@@ -1,0 +1,7 @@
+{
+  "name": "ionic-is-input-cursor-bug",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

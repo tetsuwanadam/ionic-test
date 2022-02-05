@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ionic-is-input-cursor-bug",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

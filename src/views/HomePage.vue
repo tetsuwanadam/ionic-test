@@ -2,27 +2,30 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Time Picker Test</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
+          <ion-title size="large">Time Picker Test</ion-title>
         </ion-toolbar>
       </ion-header>
 
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
+      <ion-item detail="true">
+        <ion-label id="time_label">Show time picker</ion-label>
+      </ion-item>
+
+      <ion-popover trigger="time_label">
+        <ion-datetime value="13:15" presentation="time" show-default-buttons></ion-datetime>
+      </ion-popover>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonContent, IonDatetime, IonHeader, IonItem, IonLabel, IonPage, IonPopover, IonTitle, IonToolbar } from '@ionic/vue';
 </script>
 
 <style scoped>
